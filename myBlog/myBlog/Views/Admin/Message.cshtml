@@ -1,0 +1,21 @@
+﻿@using myBlog.Models;
+@{
+    Layout = null;
+}
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="gb2312">
+    <title>后台管理</title>
+</head>
+<body>
+    @foreach (Message messages in ViewBag.messages as List<Message>)
+    {
+        <span>@messages.Content</span><br />
+        <span>@messages.Author</span><br />
+    }
+</body>
+</html>
+
+
