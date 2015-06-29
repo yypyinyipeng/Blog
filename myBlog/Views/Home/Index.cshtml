@@ -1,0 +1,114 @@
+﻿@using myBlog.Models
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="gb2312">
+    <title>尹逸朋的个人博客——主题《如影随形》</title>
+    <meta name="keywords" content="尹逸朋的个人博客" />
+    <meta name="description" content="如影随形主题的个人博客。" />
+    <link href="../Content/base.css" rel="stylesheet">
+    <link href="../Content/index.css" rel="stylesheet">
+    <link href="../Content/media.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+    <!--[if lt IE 9]>
+    <script src="js/modernizr.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div class="ibody">
+        <header>
+            <h1>如影随形</h1>
+            <h2>影子是一个会撒谎的精灵，它在虚空中流浪和等待被发现之间;在存在与不存在之间....</h2>
+            <div class="logo"><a href="/"></a></div>
+            <nav id="topnav"><a href="/Home/Index">首页</a><a href="/Home/About">关于我</a><a href="/Home/Slive">慢生活</a><a href="/Home/Share">资源分享</a><a href="/Home/Message">留言</a></nav>
+        </header>
+        <article>
+            <div class="banner">
+                <ul class="texts">
+                    <p>The best life is use of willing attitude, a happy-go-lucky life. </p>
+                    <p>最好的生活是用心甘情愿的态度，过随遇而安的生活。</p>
+                </ul>
+            </div>
+            <div class="bloglist">
+                <h2>
+                    <p><span>推荐</span>文章</p>
+                </h2>
+
+                @foreach(Post posts in ViewBag.posts as List<Post>)
+                {
+                   <div class="blogs">
+                       <h3><a href="/Home/PostMore?id=@posts.ID">@posts.Title</a></h3>
+                       <figure><img src="../images/001.jpg"></figure>
+                       <ul>
+                           <p>@posts.Content</p>
+                           <a href="/Home/PostMore?id=@posts.ID" target="_blank" class="readmore">阅读全文&gt;&gt;</a>
+                       </ul>
+                       <p class="autor"><span>作者：@posts.Author</span><span>分类：【<a href="/">@posts.Classify</a>】</span><span>浏览（<a href="/">@posts.Browse</a>）</span><span>评论（<a href="/"></a>）</span></p>
+                       <div class="dateview">@posts.DateOfIssue.ToShortDateString()</div>
+                   </div>
+                }
+            </div>
+        </article>
+        <aside>
+            <div class="avatar"><a href="/Home/About"><span>关于尹逸朋</span></a></div>
+            <div class="topspaceinfo">
+                <h1>执子之手，与子偕老</h1>
+                <p>于千万人之中，我遇见了我所遇见的人....</p>
+            </div>
+            <div class="about_c">
+                <p>网名：假如爱有天意</p>
+                <p>职业：asp.net、php程序员 </p>
+                <p>籍贯：黑龙江省-哈尔滨市</p>
+                <p>电话：18845296347</p>
+                <p>邮箱：yin9964857@vip.qq.com</p>
+            </div>
+            <div class="bdsharebuttonbox"><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_more" data-cmd="more"></a></div>
+            <div class="tj_news">
+                <h2>
+                    <p class="tj_t1">最新文章</p>
+                </h2>
+                <ul>
+                    @foreach(Post posts in ViewBag.posts as List<Post>)
+                    {
+                         <li><a href="/Home/PostMore?id=@posts.ID">@posts.Title</a></li>
+                    }
+                </ul>
+                <h2>
+                    <p class="tj_t2">推荐文章</p>
+                </h2>
+                <ul>
+                    @foreach(Post posts in ViewBag.posts as List<Post>)
+                    { 
+                         <li><a href="/Home/PostMore?id=@posts.ID">@posts.Title</a></li>
+                    }
+                </ul>
+            </div>
+            <div class="links">
+                <h2>
+                    <p>友情链接</p>
+                </h2>
+                <ul>
+                    <li><a href="/">尹逸朋个人博客</a></li>
+                    <li><a href="/">ASP.NET技术社区</a></li>
+                </ul>
+            </div>
+            <div class="copyright">
+                <ul>
+                    <p> Design by <a href="/">假如爱有天意</a></p>
+                    <p>蜀ICP备11002373号-1</p>
+                    </p>
+                </ul>
+            </div>
+        </aside>
+        <script src="../Scripts/silder.js"></script>
+        <div class="clear"></div>
+        <!-- 清除浮动 -->
+    </div>
+</body>
+</html>
+
