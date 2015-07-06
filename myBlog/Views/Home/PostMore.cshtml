@@ -39,11 +39,31 @@
                    <p>@ViewData["content"]</p>
                 </ul>
 
+                <div style="border:1px solid #000000; margin-bottom: 20px;">
+                    @{int i = 0;}
+                    @foreach (PostReply postreply in ViewBag.postreply as List<PostReply>)
+                    {
+                        <div style="height:300px">
+                            @if (i != 0) 
+                            {
+                                <hr />
+                            }
+                                @Html.Raw(postreply.ReplyContent)<br />
+                                @Html.Raw(postreply.ReplyAuthor)<br />
+                                @Html.Raw(postreply.DateOfIssue)
+                        </div>
+                        i++;
+                    }
+                </div>
+
+
+                <input type="button" id="tbutton" value="我要评论" style="display:block">
+                <div id="eidtor" style="display:none">
                 <form action="/Home/PostMore_reply" method="post" id="myform">
                    
                     <script id="container" name="content" type="text/plain" ></script>
                     <input type="hidden" value="@ViewData["id"]" name="id" />
-                    <input type="button" value="提交" onclick="validateEditor()" />
+                    <input type="button" value="提交" onclick="validateEditor()" style="float:right"/>
                 </form>
                 <script type="text/javascript">
 
@@ -68,10 +88,24 @@
                     <script type="text/javascript" src="../Content/ueditor/ueditor.all.js"></script>
                     <!-- 实例化编辑器 -->
                     <script type="text/javascript">
-                        var ue = UE.getEditor('container');
-                    </script>
+                        var ue = UE.getEditor('container');</script>
                 </div>
-        </article>
+
+                <script type="text/javascript">
+                    var tbutton = document.getElementById("tbutton");
+                    var tdiv = document.getElementById("eidtor");
+                    tbutton.onclick = function () {
+                        if (tdiv.style.display == "none") {
+                            tdiv.style.display = "block";
+                            tbutton.value = "放弃评论";
+
+                        } else {
+                            tdiv.style.display = "none";
+                            tbutton.value = "我要评论";
+                        }
+                    }
+               </script>
+</article>
         <aside>
             <div class="rnav">
                 <li class="rnav1 "><a href="/">日记</a></li>

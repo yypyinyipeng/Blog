@@ -1,4 +1,4 @@
-﻿@using myBlog.Models
+﻿@using myBlog.Models.ViewModels
 @{
     Layout = null;
 }
@@ -39,7 +39,7 @@
                     <p><span>推荐</span>文章</p>
                 </h2>
 
-                @foreach(Post posts in ViewBag.posts as List<Post>)
+                @foreach(vPost posts in ViewBag.posts as List<vPost>)
                 {
                    <div class="blogs">
                        <h3><a href="/Home/PostMore?id=@posts.ID">@posts.Title</a></h3>
@@ -48,7 +48,7 @@
                            <p>@posts.Content</p>
                            <a href="/Home/PostMore?id=@posts.ID" target="_blank" class="readmore">阅读全文&gt;&gt;</a>
                        </ul>
-                       <p class="autor"><span>作者：@posts.Author</span><span>分类：【<a href="/">@posts.Classify</a>】</span><span>浏览（<a href="/">@posts.Browse</a>）</span><span>评论（<a href="/"></a>）</span></p>
+                       <p class="autor"><span>作者：<span style="color:#199d29; margin: 0px; ">@posts.Author</span></span><span>分类：【<span style="color:#358080; margin: 0px">@posts.Classify</span>】</span><span>浏览（<span style="color:blue;margin:0px">@posts.Browse）</span><span>评论（<span style="color:#b200ff; margin: 0px; ">@posts.ReplyCount</span>）</span></p>
                        <div class="dateview">@posts.DateOfIssue.ToShortDateString()</div>
                    </div>
                 }
@@ -73,7 +73,7 @@
                     <p class="tj_t1">最新文章</p>
                 </h2>
                 <ul>
-                    @foreach(Post posts in ViewBag.posts as List<Post>)
+                    @foreach(vPost posts in ViewBag.posts as List<vPost>)
                     {
                          <li><a href="/Home/PostMore?id=@posts.ID">@posts.Title</a></li>
                     }
@@ -82,7 +82,7 @@
                     <p class="tj_t2">推荐文章</p>
                 </h2>
                 <ul>
-                    @foreach(Post posts in ViewBag.posts as List<Post>)
+                    @foreach(vPost posts in ViewBag.posts as List<vPost>)
                     { 
                          <li><a href="/Home/PostMore?id=@posts.ID">@posts.Title</a></li>
                     }

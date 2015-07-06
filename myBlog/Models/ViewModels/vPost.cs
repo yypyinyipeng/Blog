@@ -14,7 +14,7 @@ namespace myBlog.Models.ViewModels
         public string Classify { get; set; }
         public int Browse { get; set; } //浏览量
         public DateTime DateOfIssue { get; set; }
-        public int ReplyCount { get; set; }//评论数 
+        public int ReplyCount { get; set; } //评论数 
         public vPost() { 
               
         }
@@ -27,7 +27,7 @@ namespace myBlog.Models.ViewModels
             this.Classify = post.Classify;
             this.Browse = post.Browse;
             this.DateOfIssue = post.DateOfIssue;
-            this.ReplyCount = db.PostReply.Where(p => p.ID == post.ID).ToList().Count;
+            this.ReplyCount = db.PostReply.Where(p => p.PostID == post.ID).ToList().Count;
         }
     }
 }

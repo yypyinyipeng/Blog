@@ -14,11 +14,17 @@ namespace myBlog.Controllers
         {
             DB db = new DB();
             List<Post> posts = new List<Post>();
+            List<vPost> vposts = new List<vPost>();
             posts =
                 (from p in db.Posts
                  orderby p.ID descending
                  select p).ToList();
-            ViewBag.posts = posts; 
+            foreach(Post post in posts)
+            {
+                vPost vpost = new vPost(post);
+                vposts.Add(vpost);
+            }
+            ViewBag.posts = vposts;
             return View();
         }
 
@@ -86,6 +92,13 @@ namespace myBlog.Controllers
             ViewData["id"] = post2.ID;
             ViewData["title"] = post2.Title;
             ViewData["content"] = post2.Content;
+
+            List<PostReply> postreply = new List<PostReply>();
+            postreply =
+                (from p in db.PostReply
+                 where p.PostID == id
+                 select p).ToList();
+            ViewBag.postreply = postreply;
             return View();
         }
         [HttpPost]

@@ -11,7 +11,7 @@ namespace myBlog.Models
         public int ID { get; set; }
         [ForeignKey("Post")]
         public int PostID{ get; set; }
-        public virtual Post Post { get; set; }
+        public virtual Post Post { get; set; }  //外键查询连带关系
         public string ReplyContent { get; set; }
         public string ReplyAuthor { get; set; }
         public DateTime DateOfIssue { get; set; }

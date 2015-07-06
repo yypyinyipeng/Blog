@@ -35,3 +35,40 @@ C:\Users\逸朋\Documents\Visual Studio 2013\Projects\myBlog\myBlog\bin\EntityFr
 C:\Users\逸朋\Documents\Visual Studio 2013\Projects\myBlog\myBlog\bin\EntityFramework.SqlServer.dll
 C:\Users\逸朋\Documents\Visual Studio 2013\Projects\myBlog\myBlog\bin\EntityFramework.xml
 C:\Users\逸朋\Documents\Visual Studio 2013\Projects\myBlog\myBlog\bin\EntityFramework.SqlServer.xml
+E:\yyp\Blog\myBlog\bin\myBlog.dll.config
+E:\yyp\Blog\myBlog\bin\myBlog.dll
+E:\yyp\Blog\myBlog\bin\myBlog.pdb
+E:\yyp\Blog\myBlog\bin\Antlr3.Runtime.dll
+E:\yyp\Blog\myBlog\bin\EntityFramework.dll
+E:\yyp\Blog\myBlog\bin\EntityFramework.SqlServer.dll
+E:\yyp\Blog\myBlog\bin\Microsoft.Web.Infrastructure.dll
+E:\yyp\Blog\myBlog\bin\Newtonsoft.Json.dll
+E:\yyp\Blog\myBlog\bin\System.Web.Helpers.dll
+E:\yyp\Blog\myBlog\bin\System.Web.Mvc.dll
+E:\yyp\Blog\myBlog\bin\System.Web.Optimization.dll
+E:\yyp\Blog\myBlog\bin\System.Web.Razor.dll
+E:\yyp\Blog\myBlog\bin\System.Web.WebPages.Deployment.dll
+E:\yyp\Blog\myBlog\bin\System.Web.WebPages.dll
+E:\yyp\Blog\myBlog\bin\System.Web.WebPages.Razor.dll
+E:\yyp\Blog\myBlog\bin\WebGrease.dll
+E:\yyp\Blog\myBlog\bin\EntityFramework.xml
+E:\yyp\Blog\myBlog\bin\EntityFramework.SqlServer.xml
+E:\yyp\Blog\myBlog\bin\System.Web.Helpers.xml
+E:\yyp\Blog\myBlog\bin\System.Web.Mvc.xml
+E:\yyp\Blog\myBlog\bin\System.Web.Optimization.xml
+E:\yyp\Blog\myBlog\bin\System.Web.Razor.xml
+E:\yyp\Blog\myBlog\bin\System.Web.WebPages.xml
+E:\yyp\Blog\myBlog\bin\System.Web.WebPages.Deployment.xml
+E:\yyp\Blog\myBlog\bin\System.Web.WebPages.Razor.xml
+E:\yyp\Blog\myBlog\bin\Newtonsoft.Json.xml
+E:\yyp\Blog\myBlog\bin\Antlr3.Runtime.pdb
+E:\yyp\Blog\myBlog\bin\zh-Hans\System.Web.Helpers.resources.dll
+E:\yyp\Blog\myBlog\bin\zh-Hans\System.Web.Mvc.resources.dll
+E:\yyp\Blog\myBlog\bin\zh-Hans\System.Web.Optimization.resources.dll
+E:\yyp\Blog\myBlog\bin\zh-Hans\System.Web.Razor.resources.dll
+E:\yyp\Blog\myBlog\bin\zh-Hans\System.Web.WebPages.resources.dll
+E:\yyp\Blog\myBlog\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
+E:\yyp\Blog\myBlog\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
+E:\yyp\Blog\myBlog\obj\Debug\myBlog.csprojResolveAssemblyReference.cache
+E:\yyp\Blog\myBlog\obj\Debug\myBlog.dll
+E:\yyp\Blog\myBlog\obj\Debug\myBlog.pdb
