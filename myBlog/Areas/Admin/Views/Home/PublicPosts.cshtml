@@ -6,9 +6,9 @@
 <head>
     <meta charset="UTF-8">
     <title>后台管理</title>
-    <link rel="stylesheet" type="text/css" href="../Content/common.css" />
-    <link rel="stylesheet" type="text/css" href="../Content/main.css" />
-    <script type="text/javascript" src="../Script/modernizr.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../Content/common.css" />
+    <link rel="stylesheet" type="text/css" href="../../Content/main.css" />
+    <script type="text/javascript" src="../Scripts/modernizr.min.js"></script>
 </head>
 <body>
     <div class="topbar-wrap white">
@@ -24,7 +24,7 @@
                 <ul class="top-info-list clearfix">
                     <li><a href="#">管理员</a></li>
                     <li><a href="#">修改密码</a></li>
-                    <li><a href="/Admin/OutLogin">退出</a></li>
+                    <li><a href="/Admin/Home/OutLogin">退出</a></li>
                 </ul>
             </div>
         </div>
@@ -39,10 +39,10 @@
                     <li>
                         <a href="#"><i class="icon-font">&#xe003;</i>常用操作</a>
                         <ul class="sub-menu">
-                            <li><a href="/Admin/PublicPosts"><i class="icon-font">&#xe008;</i>发布日志</a></li>
-                            <li><a href="/Admin/ManagePost"><i class="icon-font">&#xe005;</i>日志管理</a></li>
+                            <li><a href="/Admin/Home/PublicPosts"><i class="icon-font">&#xe008;</i>发布日志</a></li>
+                            <li><a href="/Admin/Home/ManagePost"><i class="icon-font">&#xe005;</i>日志管理</a></li>
                             <li><a href="#"><i class="icon-font">&#xe006;</i>分类管理</a></li>
-                            <li><a href="/Admin/Message"><i class="icon-font">&#xe004;</i>留言管理</a></li>
+                            <li><a href="/Admin/Home/Message"><i class="icon-font">&#xe004;</i>留言管理</a></li>
                             <li><a href="#"><i class="icon-font">&#xe012;</i>评论管理</a></li>
                             <li><a href="#"><i class="icon-font">&#xe052;</i>友情链接</a></li>
                             <li><a href="#"><i class="icon-font">&#xe033;</i>广告管理</a></li>
@@ -68,7 +68,7 @@
             </div>
             <div class="result-wrap">
                 <div class="result-content">
-                    <form action="/Admin/PublicPosts" method="post"  enctype="multipart/form-data">
+                    <form action="/Admin/Home/PublicPosts" method="post"  enctype="multipart/form-data">
                         <table class="insert-tab" width="100%">
                             <tbody>
                                 <tr>

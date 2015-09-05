@@ -69,6 +69,6 @@ E:\yyp\Blog\myBlog\bin\zh-Hans\System.Web.Razor.resources.dll
 E:\yyp\Blog\myBlog\bin\zh-Hans\System.Web.WebPages.resources.dll
 E:\yyp\Blog\myBlog\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
 E:\yyp\Blog\myBlog\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
-E:\yyp\Blog\myBlog\obj\Debug\myBlog.csprojResolveAssemblyReference.cache
 E:\yyp\Blog\myBlog\obj\Debug\myBlog.dll
 E:\yyp\Blog\myBlog\obj\Debug\myBlog.pdb
+E:\yyp\Blog\myBlog\obj\Debug\myBlog.csprojResolveAssemblyReference.cache

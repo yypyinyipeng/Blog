@@ -18,6 +18,8 @@
     <link href="../Content/style.css" rel="stylesheet">
     <link href="../Content/media.css" rel="stylesheet">
     <link href="../Content/ueditor/themes/iframe.css" rel="stylesheet" />
+    <script type="text/javascript" src="../Scripts/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="../Scripts/yyp_base.js"></script>
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
     <!--[if lt IE 9]>
     <script src="js/modernizr.js"></script>
@@ -72,7 +74,7 @@
                          var content = UE.getEditor('container').hasContents();
                          if (content == false)
                          {
-                                alert('请输入内容！ ');
+                             CastMsg("请输入内容！");
                                 UE.getEditor('editor').focus();//光标返回编辑器中
                                 return false;
                          }

@@ -32,3 +32,5 @@ C:\Users\逸朋\Documents\Visual Studio 2013\Projects\myBlog\myBlog.Tests\bin\De
 C:\Users\逸朋\Documents\Visual Studio 2013\Projects\myBlog\myBlog.Tests\bin\Debug\zh-Hans\System.Web.Optimization.resources.dll
 C:\Users\逸朋\Documents\Visual Studio 2013\Projects\myBlog\myBlog.Tests\obj\Debug\myBlog.Tests.dll
 C:\Users\逸朋\Documents\Visual Studio 2013\Projects\myBlog\myBlog.Tests\obj\Debug\myBlog.Tests.pdb
+E:\yyp\Blog\myBlog.Tests\obj\Debug\myBlog.Tests.csprojResolveAssemblyReference.cache
+E:\yyp\Blog\myBlog.Tests\obj\Debug\myBlog.Tests.dll

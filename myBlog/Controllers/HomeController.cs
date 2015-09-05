@@ -1,4 +1,5 @@
 ﻿using myBlog.Models;
+using myBlog.Models.DataModels;
 using myBlog.Models.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,8 @@ namespace myBlog.Controllers
 {
     public class HomeController : Controller
     {
+        #region Index G
+        [HttpGet]
         public ActionResult Index()
         {
             DB db = new DB();
@@ -19,7 +22,7 @@ namespace myBlog.Controllers
                 (from p in db.Posts
                  orderby p.ID descending
                  select p).ToList();
-            foreach(Post post in posts)
+            foreach (Post post in posts)
             {
                 vPost vpost = new vPost(post);
                 vposts.Add(vpost);
@@ -27,6 +30,49 @@ namespace myBlog.Controllers
             ViewBag.posts = vposts;
             return View();
         }
+        #endregion
+
+        #region Index P
+        [HttpPost]
+        public ActionResult Index(int page)
+        {
+            DB db = new DB();
+            int index = page * 10;
+            List<Post> posts = new List<Post>();
+            List<vPost> vposts = new List<vPost>();
+            posts =
+                (from p in db.Posts
+                 orderby p.ID descending
+                 select p).Skip(index).Take(10).ToList();
+            foreach (Post item in posts)
+            {
+                vposts.Add(new vPost(item));
+            }
+            AjaxModel ajaxModel = new AjaxModel();
+            try
+            {
+                if (vposts.Count() == 0)
+                {
+                    ajaxModel.Data = "";
+                    ajaxModel.Statu = "end";
+                    ajaxModel.Msg = "没有更多了";
+                }
+                else
+                {
+                    ajaxModel.Data = vposts;
+                    ajaxModel.Statu = "OK";
+                    ajaxModel.Msg = "加载成功";
+                }
+            }
+            catch
+            {
+                ajaxModel.Statu = "err";
+                ajaxModel.Msg = "获取失败";
+
+            }
+            return Json(ajaxModel);
+        }
+        #endregion
 
         public ActionResult About()   //关于我
         {

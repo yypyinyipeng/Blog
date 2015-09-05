@@ -5,14 +5,16 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace myBlog.Controllers
+
+namespace myBlog.Areas.Admin.Controllers
 {
-    public class AdminController : Controller
+    public class HomeController : Controller
     {
+        
         public ActionResult Index()
         {
             if (this.HttpContext.Session["User"] == null)
-                return Redirect("/Admin/Login");
+                return Redirect("/Admin/Home/Login");
             else
                 return View();
         }
@@ -59,7 +61,7 @@ namespace myBlog.Controllers
             if (user != null)
             {
                 this.HttpContext.Session["User"] = username;
-                return Redirect("/Admin/Index");
+                return Redirect("/Admin/Home/Index");
             }
             else
             {
@@ -91,7 +93,7 @@ namespace myBlog.Controllers
                 int row = db.SaveChanges();
                 if (row > 0)
                 {
-                    return Redirect("/Admin/PublicPosts");
+                    return Redirect("/Admin/Home/PublicPosts");
                 }
                 else
                 {
